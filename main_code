@@ -1,0 +1,424 @@
+#include<iostream>
+#include<conio.h>//to use getch()
+#include<windows.h>//to use system("CLS")
+#include<stdlib.h>//use to get our question in shuffle manner everytime
+using namespace std;
+struct student{
+    char name[20],roll[20];
+    int marks;
+    int random;//generate random number to get shuffled questions
+};
+//identifier for struct student
+student st;//globally declared
+//here we will create our function of cpp() java() python()
+void cpp() {
+    char choice;
+    st.marks = 0;
+    // st.random=rand();
+    //random number any number without limit
+
+    int i = 0, arr[5];
+       //array ko isliye bnaya hai kyoki jo random number already generate ho gaya hi usko store krne ke liye so that 
+    //it will not go further again if generate
+
+    while (i < 5) {
+        back:
+        st.random = rand() % 6;//generate random umber under 6
+
+        for (int j = 0; j < i; j++) {
+            if (st.random == arr[j]) {
+                goto back;//vapas chale jayega unconditional jumps
+            }
+        }
+
+        arr[i] = st.random;
+
+        switch (st.random) {
+            case 0:
+                cout << i + 1 << ") What is the correct syntax to output \" Hello World\" in C++" << endl;
+                cout << "A. System.out.println(\"Hello World\")" << endl;
+                cout << "B. Console.writeLine(\"Hello World\");" << endl;
+                cout << "C. print<<(\"Hello World\")" << endl;
+                cout << "D. cout<<\"Hello World\";" << endl;
+                choice = getch();
+                if (choice == 'D' || choice == 'd') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 1:
+                cout << i + 1 << ") Which operator is used for accessing the value at a memory address in C++?" << endl;
+                cout << "A. &" << endl;
+                cout << "B. *" << endl;
+                cout << "C. %" << endl;
+                cout << "D. $" << endl;
+                choice = getch();
+                if (choice == 'B' || choice == 'b') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 2:
+                cout << i + 1 << ") What is the correct syntax for a single-line comment in C++?" << endl;
+                cout << "A. // This is a comment" << endl;
+                cout << "B. /* This is a comment */" << endl;
+                cout << "C. # This is a comment" << endl;
+                cout << "D. -- This is a comment" << endl;
+                choice = getch();
+                if (choice == 'A' || choice == 'a') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 3:
+                cout << i + 1 << ") Which of the following is a correct way to initialize an array in C++?" << endl;
+                cout << "A. array = {1, 2, 3};" << endl;
+                cout << "B. int array[] = {1, 2, 3};" << endl;
+                cout << "C. array = [1, 2, 3];" << endl;
+                cout << "D. int array = {1, 2, 3};" << endl;
+                choice = getch();
+                if (choice == 'B' || choice == 'b') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 4:
+                cout << i + 1 << ") Which of the following correctly defines a function in C++?" << endl;
+                cout << "A. def function() {" << endl;
+                cout << "B. function def() {" << endl;
+                cout << "C. void function() {" << endl;
+                cout << "D. function void() {" << endl;
+                choice = getch();
+                if (choice == 'C' || choice == 'c') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 5:
+                cout << i + 1 << ") Which keyword is used to define a class in C++?" << endl;
+                cout << "A. class" << endl;
+                cout << "B. Class" << endl;
+                cout << "C. ClassDef" << endl;
+                cout << "D. DefineClass" << endl;
+                choice = getch();
+                if (choice == 'A' || choice == 'a') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+        }
+        i++;
+    }
+}
+
+ void java() {
+    char choice;
+    st.marks = 0;
+    int i = 0, arr[5];
+    
+    while (i < 6) {
+        back:
+        st.random = rand() % 6;
+        
+        for (int j = 0; j <= 5; j++) {
+            if (st.random == arr[j]) {
+                goto back;
+            }
+        }
+        
+        arr[i] = st.random;
+        
+        switch (st.random) {
+            case 0:
+                cout << "What is the correct syntax to output \"Hello World\" in Java?" << endl;
+                cout << "A. System.out.println(\"Hello World\")" << endl;
+                cout << "B. Console.writeLine(\"Hello World\");" << endl;
+                cout << "C. print<<(\"Hello World\")" << endl;
+                cout << "D. (cout<<\"Hello World\"" << endl;
+                choice = getch();
+                if (choice == 'A' || choice == 'a') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 1:
+                cout << "Which operator is used for accessing the value at a memory address in Java?" << endl;
+                cout << "A. &" << endl;
+                cout << "B. *" << endl;
+                cout << "C. %" << endl;
+                cout << "D. $" << endl;
+                choice = getch();
+                if (choice == 'B' || choice == 'b') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 2:
+                cout << "What is the correct syntax for a single-line comment in Java?" << endl;
+                cout << "A. // This is a comment" << endl;
+                cout << "B. /* This is a comment */" << endl;
+                cout << "C. # This is a comment" << endl;
+                cout << "D. -- This is a comment" << endl;
+                choice = getch();
+                if (choice == 'A' || choice == 'a') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 3:
+                cout << "Which of the following is a correct way to initialize an array in Java?" << endl;
+                cout << "A. array = {1, 2, 3};" << endl;
+                cout << "B. int array[] = {1, 2, 3};" << endl;
+                cout << "C. array = [1, 2, 3];" << endl;
+                cout << "D. int array = {1, 2, 3};" << endl;
+                choice = getch();
+                if (choice == 'B' || choice == 'b') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 4:
+                cout << "Which of the following correctly defines a function in Java?" << endl;
+                cout << "A. def function() {" << endl;
+                cout << "B. function def() {" << endl;
+                cout << "C. void function() {" << endl;
+                cout << "D. function void() {" << endl;
+                choice = getch();
+                if (choice == 'C' || choice == 'c') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 5:
+                cout << "Which keyword is used to define a class in Java?" << endl;
+                cout << "A. class" << endl;
+                cout << "B. Class" << endl;
+                cout << "C. ClassDef" << endl;
+                cout << "D. DefineClass" << endl;
+                choice = getch();
+                if (choice == 'A' || choice == 'a') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+        }
+        i++;
+    }
+}
+void python() {
+    char choice;
+    st.marks = 0;
+    int i = 0, arr[6];
+    
+    while (i < 6) {
+        back:
+        st.random = rand() % 6;
+        
+        for (int j = 0; j <= 5; j++) {
+            if (st.random == arr[j]) {
+                goto back;
+            }
+        }
+        
+        arr[i] = st.random;
+        
+        switch (st.random) {
+            case 0:
+                cout << "What is the correct syntax to output \"Hello World\" in Python?" << endl;
+                cout << "A. System.out.println(\"Hello World\")" << endl;
+                cout << "B. Console.writeLine(\"Hello World\");" << endl;
+                cout << "C. print(\"Hello World\")" << endl;
+                cout << "D. (print(\"Hello World\")" << endl;
+                choice = getch();
+                if (choice == 'C' || choice == 'c') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 1:
+                cout << "Which operator is used for accessing the value at a memory address in Python?" << endl;
+                cout << "A. &" << endl;
+                cout << "B. *" << endl;
+                cout << "C. %" << endl;
+                cout << "D. $" << endl;
+                choice = getch();
+                if (choice == 'B' || choice == 'b') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 2:
+                cout << "What is the correct syntax for a single-line comment in Python?" << endl;
+                cout << "A. // This is a comment" << endl;
+                cout << "B. /* This is a comment */" << endl;
+                cout << "C. # This is a comment" << endl;
+                cout << "D. -- This is a comment" << endl;
+                choice = getch();
+                if (choice == 'C' || choice == 'c') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 3:
+                cout << "Which of the following is a correct way to initialize a list in Python?" << endl;
+                cout << "A. list = {1, 2, 3};" << endl;
+                cout << "B. int list[] = {1, 2, 3};" << endl;
+                cout << "C. list = [1, 2, 3];" << endl;
+                cout << "D. int list = [1, 2, 3];" << endl;
+                choice = getch();
+                if (choice == 'C' || choice == 'c') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 4:
+                cout << "Which of the following correctly defines a function in Python?" << endl;
+                cout << "A. def function() {" << endl;
+                cout << "B. function def() {" << endl;
+                cout << "C. void function() {" << endl;
+                cout << "D. function void() {" << endl;
+                choice = getch();
+                if (choice == 'A' || choice == 'a') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+
+            case 5:
+                cout << "Which keyword is used to define a class in Python?" << endl;
+                cout << "A. class" << endl;
+                cout << "B. Class" << endl;
+                cout << "C. ClassDef" << endl;
+                cout << "D. DefineClass" << endl;
+                choice = getch();
+                if (choice == 'A' || choice == 'a') {
+                    cout << "Your answer is correct" << endl;
+                    st.marks++;
+                } else {
+                    cout << "Your answer is incorrect" << endl;
+                }
+                break;
+        }
+        i++;
+    }
+}
+
+void result(){
+    int per=0;
+    cout<<"Student Name : "<<st.name<<endl;
+    cout<<"Roll No : "<<st.roll<<endl;
+    cout<<"Marks : "<<st.marks<<" Out of 6"<<endl;
+    per=100*st.marks/6;
+    cout<<"Percentage : "<<per<<"%"<<endl;
+    if(per>=50){
+        cout<<"Status : Pass"<<endl;
+    }
+    else{
+        cout<<"Status : Fail"<<endl;
+    }
+}
+main(){
+    char press,select;
+  do{
+    cout<<"\n\t\t********************"<<endl;
+    cout<<"\t\t      QUIZ GAME"<<endl;
+    cout<<"\t\t********************"<<endl;
+    cout<<"\t\t Enter Name : ";
+    gets(st.name);//yaha par cin>>st.name isliye use nahi kiya because if we use it then usme agar ham name dakte vakt space dete toh wo usko consider nahi krta thus we use gets(st.name)
+    cout<<"\t\t Roll No. : ";
+    gets(st.roll);
+    //roll no dalne ke baad hamari screen kht ho rhi thi new screen aa rhi thi thus usko krne ke liye hamne ye use kiya
+    system("CLS");//for screen clear
+    //now next screen mai iske neeche ka ayega
+    cout<<"\t\t Marks less than 50% will be Fail"<<endl<<endl;
+    cout<<"Select which Language Quiz you want to perform"<<endl;
+    cout<<"1) C++"<<endl;
+    cout<<"2) Java"<<endl;
+    cout<<"3) Python"<<endl;
+    select=getch();//upppar teen maise koi bhi click krega to wo select ho jaigi
+    // //now we are addding switch statement which will work acc to the language we have cgoosen for the test
+    system("CLS");
+    switch(select){
+        case '1':
+        cout<<"\t\tC++ Quiz"<<endl;
+        cpp();
+        system("CLS");//resut hamara next screen mai calll hao         
+        cout<<"\t\tC++ Quiz Result"<<endl;
+        result();       
+        break;
+
+        case '2':
+        cout<<"\t\tJava Quiz"<<endl;
+        java();
+        system("CLS");//resut hamara next screen mai calll ho
+        cout<<"\t\tJava Quiz Result"<<endl;
+        result();
+        
+        break;
+
+        case '3':
+        cout<<"\t\tPython Quiz"<<endl;
+        python();
+        system("CLS");//resut hamara next screen mai calll ho
+        cout<<"\t\tPyhton Quiz Result"<<endl;
+        result();
+        
+        break;
+
+        default:
+		cout<<"Invalid input"<<endl;
+		break;
+    }
+    cout<<"Press y to continue or any key to terminate"<<endl;
+    press=getch();
+    system("CLS");
+  }while(press=='y' || press=='Y');
+} 
